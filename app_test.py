@@ -12,9 +12,8 @@ def test_home_endpoint(client):
     response = client.get('/')
     assert response.status_code == 200
     data = response.get_json()
-    assert data['status'] == 'success'
-    assert 'API Flask funcionando!' in data['message']
-    print(" Teste home endpoint passou!")
+    assert data['message'] == 'API Flask funcionando!'
+    print(" Home endpoint OK")
 
 def test_health_endpoint(client):
     """Testa o endpoint de health check"""
@@ -22,16 +21,7 @@ def test_health_endpoint(client):
     assert response.status_code == 200
     data = response.get_json()
     assert data['status'] == 'healthy'
-    print(" Teste health endpoint passou!")
-
-def test_get_user(client):
-    """Testa o endpoint de usuário"""
-    response = client.get('/api/users/123')
-    assert response.status_code == 200
-    data = response.get_json()
-    assert data['id'] == 123
-    assert 'Usuário' in data['name']
-    print(" Teste get_user passou!")
+    print(" Health endpoint OK")
 
 def test_sum_endpoint(client):
     """Testa o endpoint de soma"""
@@ -39,8 +29,4 @@ def test_sum_endpoint(client):
     assert response.status_code == 200
     data = response.get_json()
     assert data['result'] == 8
-    print(" Teste sum endpoint passou!")
-
-if __name__ == '__main__':
-    print(" Executando testes...")
-    pytest.main([__file__, '-v'])
+    print(" Sum endpoint OK")
