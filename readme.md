@@ -6,7 +6,7 @@
 ![Flask](https://img.shields.io/badge/Flask-2.3.3-green)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI/CD-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Status](https://img.shields.io/badge/status-em%20finalização-yellow)
 
 # Overview Architecture
 
