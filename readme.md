@@ -1,175 +1,256 @@
-🚀 Flask API com CI/CD Pipeline
+### 🚀 Flask API com CI/CD Pipeline
+
 <div align="center">
-https://img.shields.io/badge/Python-3.9%252B-blue
-https://img.shields.io/badge/Flask-2.3.3-green
-https://img.shields.io/badge/GitHub%2520Actions-CI%252FCD-brightgreen
-https://img.shields.io/badge/license-MIT-blue
-https://img.shields.io/badge/status-em%2520desenvolvimento-yellow
 
-Uma API RESTful simples construída com Flask e automatizada com GitHub Actions
+![Python](https://img.shields.io/badge/Python-3.9+-blue)
+![Flask](https://img.shields.io/badge/Flask-2.3.3-green)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI/CD-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 
-📋 Funcionalidades •
-🛠️ Instalação •
-📡 Endpoints •
-🧪 Testes •
-🔄 CI/CD •
-📁 Estrutura
+# Overview Architecture
+
+Uma **API RESTful simples construída com Flask** e automatizada com **GitHub Actions** para demonstrar um pipeline básico de **CI/CD**.
 
 </div>
-📋 Sobre o Projeto
-Este projeto é uma demonstração prática de como criar uma API REST utilizando Flask e implementar um pipeline de Integração Contínua (CI) usando GitHub Actions. É um exemplo perfeito para:
 
-✅ Aprender os fundamentos de APIs com Flask
+---
 
-✅ Entender como funcionam pipelines de CI/CD
+# 📋 Funcionalidades
 
-✅ Praticar testes automatizados com pytest
+- API RESTful com endpoints bem definidos
+- Testes automatizados com **pytest**
+- Pipeline de **CI/CD com GitHub Actions**
+- Código limpo e organizado
+- Estrutura simples e fácil de expandir
 
-✅ Criar um portfólio profissional no GitHub
+---
 
-🎯 Funcionalidades
-API RESTful com endpoints bem definidos
+# 📖 Sobre o Projeto
 
-Testes automatizados com pytest
+Este projeto é uma demonstração prática de como:
 
-Pipeline CI/CD com GitHub Actions
+- Criar uma **API REST com Flask**
+- Implementar **testes automatizados com pytest**
+- Configurar **Integração Contínua (CI)** com GitHub Actions
+- Manter um projeto com **boas práticas de versionamento**
 
-Código limpo e comentado
+É ideal para quem deseja aprender os **fundamentos de desenvolvimento backend em Python** e criar um **portfólio técnico no GitHub**.
 
-Fácil de estender e modificar
+---
 
-🛠️ Instalação
-Pré-requisitos
-Python 3.9 ou superior
+# 🛠️ Instalação
 
-Git
+## Pré-requisitos
 
-Pip (gerenciador de pacotes Python)
+- Python **3.9+**
+- Git
+- Pip
 
-Passo a Passo
-1. Clone o repositório
+---
 
-bash
+## 1️⃣ Clone o repositório
+
+```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
-2. Crie um ambiente virtual (recomendado)
+```
 
-bash
-# Windows
+## 2️⃣ Crie um ambiente virtual
+
+```bash
+Windows
 python -m venv venv
 venv\Scripts\activate
-
-# Linux/Mac
+Linux / Mac
 python3 -m venv venv
 source venv/bin/activate
-3. Instale as dependências
+```
 
-bash
+## 3️⃣ Instale as dependências
+```bash
 pip install -r requirements.txt
-4. Execute a aplicação
+```
 
-bash
+## 4️⃣ Execute a aplicação
+
+```bash
 python app.py
-Acesse: http://localhost:5000 🎉
+```
 
-📡 Endpoints da API
-Método	Endpoint	Descrição	Exemplo Resposta
-GET	/	Página inicial	{"message": "API Flask funcionando!", "status": "success"}
-GET	/api/health	Health check	{"status": "healthy"}
-GET	/api/users/<id>	Busca usuário por ID	{"id": 123, "name": "Usuário 123", "email": "user123@example.com"}
-GET	/api/sum/<a>/<b>	Soma dois números	{"operation": "sum", "a": 5, "b": 3, "result": 8}
-Exemplos de uso com curl
-bash
+* Acesse:
+```bash
+http://localhost:5000
+```
+
+## 📡 Endpoints da API
+
+```text
+Método	Endpoint	Descrição
+GET	/	Página inicial
+GET	/api/health	Health check
+GET	/api/users/<id>	Buscar usuário por ID
+GET	/api/sum/<a>/<b>	Soma dois números
+Exemplo de respostas
+Endpoint principal
+{
+  "message": "API Flask funcionando!",
+  "status": "success"
+}
+Health check
+{
+  "status": "healthy"
+}
+```
+
+## 📡 Exemplos com curl
 # Endpoint principal
+
+```bash
 curl http://localhost:5000/
+```
 
 # Health check
+```bash
 curl http://localhost:5000/api/health
+```
 
 # Buscar usuário
+```bash
 curl http://localhost:5000/api/users/42
+```
 
 # Somar números
-curl http://localhost:5000/api/sum/10/20
-🧪 Testes
-O projeto utiliza pytest para testes automatizados.
 
-Executar todos os testes
-bash
+```bash
+curl http://localhost:5000/api/sum/10/20
+```
+
+## 🧪 Testes
+
+* O projeto utiliza pytest para testes automatizados.
+
+- Executar todos os testes:
+
+```bash
 python -m pytest test_app.py -v
-Executar teste específico
-bash
+```
+
+- Executar teste específico
+
+```bash
 python -m pytest test_app.py::test_home_endpoint -v
-Verificar cobertura de testes
-bash
+```
+
+- Verificar cobertura
+
+```bash
 pip install pytest-cov
 python -m pytest --cov=app test_app.py
-🔄 CI/CD
-GitHub Actions Pipeline
-O pipeline é executado automaticamente em cada push ou pull_request para as branches main/master.
+```
 
-Jobs do Pipeline:
+## 🔄 CI/CD
 
-Job	Descrição	Quando executa
-✅ Test	Executa testes em Python 3.9, 3.10 e 3.11	Sempre
-🚀 Deploy-Demo	Testa deploy local	Apenas na branch main
-Status do Pipeline
-https://github.com/seu-usuario/seu-repositorio/actions/workflows/python-ci.yml/badge.svg
+- O projeto possui um pipeline de integração contínua utilizando GitHub Actions.
 
-🔗 Ver pipeline em ação
+*O pipeline executa automaticamente quando ocorre:
 
-📁 Estrutura do Projeto
-text
-📦 meu-projeto-flask
-├── 📂 .github
-│   └── 📂 workflows
-│       └── 📄 python-ci.yml     # Configuração do GitHub Actions
-├── 📄 app.py                    # Aplicação Flask principal
-├── 📄 test_app.py              # Testes automatizados
-├── 📄 requirements.txt         # Dependências do projeto
-├── 📄 README.md               # Documentação
-└── 📄 .gitignore             # Arquivos ignorados pelo Git
-💻 Desenvolvimento Local
-Pré-requisitos de desenvolvimento
-bash
-# Instalar dependências de desenvolvimento
+- push
+
+- pull request
+
+*nas branches:
+
+- main
+
+- master
+
+# Jobs do Pipeline
+
+```text
+Job	Descrição
+Test	Executa testes em Python 3.9, 3.10 e 3.11
+Deploy-Demo	Simula um deploy local
+```
+
+## 📁 Estrutura do Projeto
+
+```bash
+📦 flask-api-ci-cd
+ ┣ 📂 .github
+ ┃ ┗ 📂 workflows
+ ┃ ┗ 📄 python-ci.yml
+ ┣ 📄 app.py
+ ┣ 📄 test_app.py
+ ┣ 📄 requirements.txt
+ ┣ 📄 README.md
+ ┗ 📄 .gitignore
+```
+
+## 💻 Desenvolvimento Local
+
+- Dependências de desenvolvimento:
+
+```bash
 pip install flake8 black pytest-cov
-Padrões de código
-bash
-# Verificar estilo de código
+```
+
+- Verificar padrão de código
+
+```bash
 flake8 app.py test_app.py --max-line-length=127
+```
 
-# Formatar código automaticamente
+- Formatar código automaticamente:
+
+```bash
 black app.py test_app.py
-📊 Monitoramento e Logs
-A aplicação gera logs que podem ser visualizados:
+```
 
-Localmente: No terminal onde o Flask está rodando
+## 📊 Monitoramento e Logs
 
-GitHub Actions: Nos artefatos do pipeline (flask.log)
+*Os logs da aplicação podem ser visualizados:
 
-🤝 Como Contribuir
-Fork o projeto
+- Localmente: no terminal onde o Flask está rodando
 
-Crie uma branch (git checkout -b feature/nova-feature)
+- GitHub Actions: nos artefatos do pipeline
 
-Commit suas mudanças (git commit -m 'Adiciona nova feature')
+## 🤝 Contribuição
 
-Push para a branch (git push origin feature/nova-feature)
+- Fork o projeto
 
-Abra um Pull Request
+- Crie uma branch
 
-🎓 Aprendizados
+- git checkout -b feature/nova-feature
+
+*Commit suas alterações:
+
+```bash
+git commit -m "Adiciona nova feature"
+```
+
+*Envie para o repositório:
+
+```bash
+git push origin feature/nova-feature
+```
+
+- Abra um Pull Request
+
+# 🎓 Aprendizados
+
 Este projeto demonstra:
 
-✅ Criação de APIs REST com Flask
+- Desenvolvimento de APIs REST com Flask
 
-✅ Testes automatizados com pytest
+- Testes automatizados com pytest
 
-✅ Versionamento de código com Git
+- Versionamento com Git
 
-✅ Integração Contínua com GitHub Actions
+- Integração contínua com GitHub Actions
 
-✅ Boas práticas de documentação
+- Estrutura organizada de projetos Python
 
-✅ Estrutura organizada de projetos Python
+- Boas práticas de documentação
+
+## 👨‍💻 Desenvolvido por Moisés Aniceto
