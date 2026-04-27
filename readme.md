@@ -20,7 +20,7 @@ Uma **API RESTful simples construída com Flask** e automatizada com **GitHub Ac
 
 - API RESTful com endpoints bem definidos
 - Testes automatizados com **pytest**
-- Pipeline de **CI/CD com GitHub Actions**
+- Pipeline de **CI com GitHub Actions**
 - Código limpo e organizado
 - Estrutura simples e fácil de expandir
 
