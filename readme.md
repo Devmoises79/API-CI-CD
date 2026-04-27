@@ -1,4 +1,4 @@
-### 🚀 Flask API com CI/CD Pipeline
+### 🚀 Flask API com CI Pipeline
 
 <div align="center">
 
